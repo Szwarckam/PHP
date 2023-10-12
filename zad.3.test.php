@@ -1,4 +1,5 @@
 <?php
+$result = "";
 function revWords($sen) {
     $slowa = str_word_count($sen, 1);
     // print_r($slowa);
@@ -10,10 +11,13 @@ function revWords($sen) {
             $wyraz = strrev($wyraz);
             $wyraz = ucfirst($wyraz);
             $wyraz = strrev($wyraz);
-        }
-    }
-
-    return implode(' ', $slowa);
+            
+          }
+          echo $wyraz;
+          echo " ";
+      }
+    
+    // return implode(' ', $slowa);
 }
 
 // Przykład użycia
