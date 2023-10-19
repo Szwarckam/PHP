@@ -1,0 +1,30 @@
+<?php
+
+$zdanie = "testowe zdanie do zrobienia";
+$slowa = [];
+$aktualneSlowo = '';
+
+foreach (str_split($zdanie) as $znak) {
+    if ($znak == ' ') {
+        if ($aktualneSlowo !== '') {
+            array_push($slowa, $aktualneSlowo);
+            $aktualneSlowo = '';
+        }
+    } else {
+        $aktualneSlowo .= $znak;
+    }
+}
+
+if ($aktualneSlowo !== '') {
+    array_push($slowa, $aktualneSlowo);
+}
+
+print_r($slowa);
+
+foreach ($slowa as &$test) {
+    if (strlen($test) % 2 == 0) {
+        $test = strrev($test);
+    }
+}
+
+print_r($slowa);
