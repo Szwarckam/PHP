@@ -7,7 +7,7 @@ $len = 0;
 $strl = "";
 for ($i=0; $i < strlen($text); $i++) { 
   if ($text[$i] != " ") {
-    $strl .= $text[$i];
+    
   }
 }
 echo $strl;
