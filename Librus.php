@@ -10,8 +10,8 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1); // "true to follow any "Location: "
 get("https://synergia.librus.pl/loguj/portalRodzina?v=1706616867");
 $r = post(array(
     "action" => "login",
-    "login" => "kszwarc",
-    "pass" => "Szwarckam2021",
+    "login" => "",
+    "pass" => "",
 ), "https://api.librus.pl/OAuth/Authorization?client_id=46");
 $r = json_decode($r);
 $goTo = "https://api.librus.pl" . $r->{'goTo'};
